@@ -1,19 +1,23 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
-import { signInUser } from '../../services/Firebase'
+import { createUser } from '../../services/Firebase'
 import { useNavigate } from 'react-router-dom'
-import ClubLogoWhite from '../../assets/images/ClubLogoWhite.png'
+import ClubLogoWhite from '../../assets/images/ClubLogoBlack.png'
 
 const defaultFormFields = {
   email: '',
   password: '',
+  confirmpassword: '',
+  conditionsAccepted: 'False',
+
 }
 
 
-const LoginPage = () => {
+const SignupPage = () => {
 
 
   const [formFields, setFormFields] = useState(defaultFormFields)
-  const { email, password } = formFields
+  const [conditionsAcceptedState, setconditionsAcceptedState] = useState('False')
+  const { email, password , confirmpassword, conditionsAccepted} = formFields
   const navigate = useNavigate()
 
   const resetFormFields = () => {
@@ -26,12 +30,19 @@ const LoginPage = () => {
     event.preventDefault()
 
     try {
-      const userCredential = await signInUser(email, password)
 
+      if(password==confirmpassword && conditionsAccepted=='False' ){        
+      const userCredential = await createUser(email, password)      
       if (userCredential) {
         resetFormFields()
         navigate('/rotract-club-thane/user')
       }
+      }
+      else{
+        console.log("Password does not match");
+      }
+
+
     } catch (error:any) {
       console.log('User Sign In Failed', error.message);
     }
@@ -42,10 +53,22 @@ const LoginPage = () => {
     setFormFields({...formFields, [name]: value })
   }
 
+  
+  const handlecheckBoxChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if(conditionsAcceptedState=='True'){      
+    setconditionsAcceptedState('False');
+    }else{      
+    setconditionsAcceptedState('True');
+    }    
+    const { name, value } = event.target
+    setFormFields({...formFields, [name]: value })
+    console.log(conditionsAcceptedState+ " This is current checkbox state");
+  }
+
 
   return (
   <>
-  <div>LoginPage</div>
+  <div>Signup Page</div>
   <div className="App">
         <div className="card">
           <div className='logo-react'>
@@ -75,6 +98,21 @@ const LoginPage = () => {
               />
             </div>
             <div>
+              <input
+                type='password'
+                name='confirmpassword'
+                value={confirmpassword}
+                onChange={handleChange}
+                placeholder="Confirm Password"
+                required
+              />
+            </div>
+            <div className="field checkbox">
+        <input type="checkbox" id="conditionsAccepted" 
+                onChange={handlecheckBoxChange} />
+        <label htmlFor="conditionsAccepted">I agree to the terms and conditions</label>
+      </div>
+            <div>
               <input id='recaptcha' type="submit" />
             </div>
           </form>
@@ -85,4 +123,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default SignupPage

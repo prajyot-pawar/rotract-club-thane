@@ -1,9 +1,9 @@
-import './App.css';
+
 import RouteManager from './constants/routes';
+import './App.css';
 
 
 function App() {
-
 
   return (    
     <>
