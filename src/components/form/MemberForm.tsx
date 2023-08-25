@@ -1,5 +1,5 @@
 
-import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 import { AuthContext } from '../../utils/auth-context';
 import '../form/UpdateProfileInfo';
 import ImageUpload from '../imageupload/image-upload';

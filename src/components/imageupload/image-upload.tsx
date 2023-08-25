@@ -1,10 +1,6 @@
-import { useState, useContext } from "react";
+import { useState,} from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { db, storage } from "../../services/Firebase"; 
-import { setDoc, doc , updateDoc } from "firebase/firestore";
-import { AuthContext } from "../../utils/auth-context";
-import { useLocation } from "react-router-dom";
-
+import {  storage } from "../../services/Firebase"; 
 
 interface ImageUploadProps {
      onImageUrlChange: (url: string) => void;
@@ -13,7 +9,7 @@ interface ImageUploadProps {
 
    const ImageUpload: React.FC<ImageUploadProps> = ({ onImageUrlChange }) => {
      
-  const { currentUserId } = useContext(AuthContext);
+//   const { currentUserId } = useContext(AuthContext);
     // State to store uploaded file
     const [file, setFile] = useState<File | null>(null);
     const [percent, setPercent] = useState<number>(0);
