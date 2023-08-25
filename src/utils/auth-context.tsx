@@ -3,7 +3,6 @@ import { User } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { SignOutUser, db, userStateListener } from "../services/Firebase";
 import { createContext, useState, useEffect, ReactNode } from "react";
-import { getFirestore, collection, doc } from 'firebase/firestore';
 
 interface Props {
   children?: ReactNode
@@ -12,13 +11,15 @@ interface Props {
 export const AuthContext = createContext({
   currentUser: {} as User | null,
   setCurrentUser: (_user:User) => {},
-  signOut: () => {}
+  signOut: () => {},  
+  currentUserId: '' as string, 
 });
 
 export const AuthProvider = ({ children }: Props) => {
   const [currentUser, setCurrentUser] = useState<User | null>(null)
   const navigate = useNavigate()
 
+  
   useEffect(() => {
     
 
@@ -38,10 +39,10 @@ export const AuthProvider = ({ children }: Props) => {
 
   const value = {
     currentUser, 
-    setCurrentUser,
-    signOut,
-  }
-  
+    setCurrentUser,   
+    currentUserId: currentUser ? currentUser.uid : '',
+    signOut, 
+      }
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+ return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

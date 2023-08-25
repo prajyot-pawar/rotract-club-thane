@@ -17,10 +17,6 @@ const HomePage = () => {
     <>
     <button onClick={LoginUser}>Login </button>
     <button onClick={RegisterUser}>SignUp </button>
-    <div>HomePage</div>
-    <div>HomePage</div>
-    <div>HomePage</div>
-    <div>HomePage</div>
     </>
   )
 }

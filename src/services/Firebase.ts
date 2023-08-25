@@ -11,10 +11,13 @@ import {
   createUserWithEmailAndPassword
 } from 'firebase/auth';
 import { getFirebaseConfig } from './firebase-config';
+import { getStorage } from "firebase/storage";
 
 const app = initializeApp(getFirebaseConfig());
 const auth = getAuth(app);
 export const db = getFirestore(app);
+export var storage = getStorage(app);
+
 
 
 export const signInUser = async (

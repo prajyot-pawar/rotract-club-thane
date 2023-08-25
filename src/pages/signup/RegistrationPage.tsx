@@ -8,7 +8,6 @@ const defaultFormFields = {
   password: '',
   confirmpassword: '',
   conditionsAccepted: 'False',
-
 }
 
 
@@ -32,7 +31,8 @@ const SignupPage = () => {
     try {
 
       if(password==confirmpassword && conditionsAccepted=='False' ){        
-      const userCredential = await createUser(email, password)      
+      const userCredential = await createUser(email, password)    
+        
       if (userCredential) {
         resetFormFields()
         navigate('/rotract-club-thane/user')
