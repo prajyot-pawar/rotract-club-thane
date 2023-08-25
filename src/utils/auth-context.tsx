@@ -1,7 +1,7 @@
 
 import { User } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { SignOutUser, db, userStateListener } from "../services/Firebase";
+import { SignOutUser,  userStateListener } from "../services/Firebase";
 import { createContext, useState, useEffect, ReactNode } from "react";
 
 interface Props {
