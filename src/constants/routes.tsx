@@ -1,17 +1,17 @@
 // import React from 'react'
 import { Routes,Route} from 'react-router-dom';
 import { useState,useEffect } from 'react';
-import HomePage from '../pages/home/HomePage';
-import LoadingScreen from '../pages/loading/LoadingScreen';
-import AboutPage from '../pages/about/AboutPage';
-import LoginPage from '../pages/login/LoginPage';
-import UpdatesPage from '../pages/updates/UpdatesPage';
-import UserPage from '../pages/user/UserPage';
+import HomePage from '../pages/home/homePage';
+import LoadingScreen from '../pages/loading/loadingScreen';
+import AboutPage from '../pages/about/aboutPage';
+import LoginPage from '../pages/login/loginPage';
+import UpdatesPage from '../pages/updates/updatesPage';
+import UserPage from '../pages/user/userPage';
 import { AuthContext } from '../utils/auth-context'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import RequireAuth from '../components/auth/require-auth';
-import SignUpForm from '../pages/signup/RegistrationPage';
+import SignUpForm from '../pages/signup/registrationPage';
 
 const RouteManager = () => {
 
