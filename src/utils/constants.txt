@@ -1,0 +1,13 @@
+Colour Palette :
+1.
+#537FE7
+#73A6FF
+#E6F4F1
+#D2A517
+
+2.
+#537FE7
+#BBDAFF
+#2A64C8
+#003089
+#002E86

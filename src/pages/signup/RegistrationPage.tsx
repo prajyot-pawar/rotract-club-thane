@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from 'react'
 import { createUser } from '../../services/Firebase'
 import { useNavigate } from 'react-router-dom'
 import ClubLogoWhite from '../../assets/images/ClubLogoBlack.png'
+import classNames from '../signup/registrationPage.module.css'
 
 const defaultFormFields = {
   email: '',
@@ -72,9 +73,9 @@ const SignupPage = () => {
   <div className="App">
         <div className="card">
           <div className='logo-react'>
-            <a href="https://reactjs.org" target="_blank">
+            {/* <a href="https://reactjs.org" target="_blank"> */}
               <img src={ClubLogoWhite} className="logo react" alt="React logo" />
-            </a>
+            {/* </a> */}
           </div>
           <form onSubmit={handleSubmit}>
             <div>

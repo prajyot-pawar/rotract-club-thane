@@ -1,7 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { signInUser } from '../../services/Firebase'
 import { useNavigate } from 'react-router-dom'
-import ClubLogoWhite from '../../assets/images/ClubLogoWhite.png'
+import ClubLogoWhiteText from '../../assets/images/ClubLogoWhiteText.png'
+import ClubLogoWhiteWheel from '../../assets/images/ClubLogoWhiteWheel.png'
 import classNames from './loginPage.module.css'
 
 const defaultFormFields = {
@@ -51,14 +52,14 @@ const LoginPage = () => {
 
   return (
   <>
-  <div className={classNames.login_screen}>
-        <div className={classNames.goto}>              
+  <div className={classNames.login_screen}>              
     <div className={classNames.goto}>      
     <div className={classNames.logo}>
-      <img src={ClubLogoWhite}  alt="logo">        
+      <img src={ClubLogoWhiteText} className={classNames.logotext}  alt="logo">        
       </img>
-      </div>
-    </div>
+      <img src={ClubLogoWhiteWheel} className={classNames.logowheel} alt="logo">        
+      </img>
+      </div>   
         </div>
         <div className={classNames.goto}>
           {/* <div className={classNames.logo}>
@@ -66,7 +67,9 @@ const LoginPage = () => {
               <img src={ClubLogoWhite} className="logo react" alt="React logo" />
             </a>
           </div> */}
+          <div className={classNames.card}>
           <form onSubmit={handleSubmit}>
+          <h1 >Sign In Form</h1>
             <div>
               <input
                 type="email"
@@ -89,10 +92,11 @@ const LoginPage = () => {
               />
               <span>{errorPassMessage}</span>
             </div>
-            <div>
-              <input id='recaptcha' type="submit" />
-            </div>
+              <div className={classNames.button}>
+              <button id='recaptcha' type="submit">Submit</button>
+            </div>          
           </form>
+          </div>
         </div>
       </div>
   

@@ -1,26 +1,16 @@
-h1{
-     font-family:Arial, Helvetica, sans-serif ;  
-     font-style:  normal;
-     font-weight: 600;
-     align-items: center;
-     color: #002E86;
-     font-size: 3.6ex;
-   }
-   
-   h2{
-     font-family:Arial, Helvetica, sans-serif ;  
-     font-style:  normal;
-     font-size: small;
-     font-weight: normal;
-     color: #002E86;
-   }
-   
 
-.login_screen{     
-     display: flex;
-     flex-direction: row;
-     height: 100vh;  
-     background-color: #537FE7;
+h2{
+  font-family:Arial, Helvetica, sans-serif ;  
+  font-style:  normal;
+  font-size: small;
+  font-weight: normal;
+  color: #002E86;
+}
+
+
+.screen{     
+     height: auto;  
+     background-color: #fc2121;
      width: 100vw;
      /* linear-gradient(
        rgba(0,28,36,0.7),
@@ -28,21 +18,8 @@ h1{
        rgba(9,63,121,0.7),
        rgba(7,89,145,0.7),
        rgba(6,96,165,0.7),
-   ), */
-   
-   background-size: cover;
-   background-position: center;
-}
-
-
-.goto{     
-  display:  flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content:center ;  
-  position: relative;
-  width: 50%;
-  height: 100%;    
+   ), */   
+   color: #003089;
 }
 
 
@@ -77,22 +54,15 @@ h1{
    
   
 
-.card{      
+form {
   display:  flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
   justify-content:center ;  
-  position: relative;
-  width: 80%;
-  max-width: 500px;
-  min-height: 50%;  
-  max-height: 60%;  
+  width: 50%;
   text-align: center; 
-  background-color: #ffffff;
-  border-radius: 50px;
-}
-
-form {
+  background-color: #0b91ff;
    }
 
 
@@ -129,7 +99,6 @@ form {
  
  span{
      font-size: 12px;
-     padding: 3px;
      font-weight: bold;
      color: rgb(255, 255, 255);
      display: none;
@@ -139,7 +108,7 @@ form {
      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;  
    font-style: oblique;
       font-size: 20px;
-      color: rgb(255, 255, 255);
+      color: rgb(255, 255, 255); 
   }
  
   button{
@@ -160,12 +129,3 @@ form {
   input:invalid~span{
      display: block;
   }
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-

@@ -5,6 +5,7 @@ import '../form/UpdateProfileInfo';
 import ImageUpload from '../imageupload/image-upload';
 import { useContext ,useState} from 'react';
 import { db } from '../../services/Firebase';
+import classNames from '../../pages/userInfo/userInfo.module.css'
 // import ImageUpload from '../imageupload/image-upload';
    
 
@@ -48,7 +49,7 @@ export const MemberForm = () => {
   };
  
      return (
-         <form className="form" onSubmit={onSubmit}>
+         <form className={classNames.form} onSubmit={onSubmit}>
              <div className="field">
                  <label htmlFor="fname">First Name : </label>
                  <input id="fname" required/>

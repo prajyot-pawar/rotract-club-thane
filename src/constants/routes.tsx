@@ -6,7 +6,7 @@ import LoadingScreen from '../pages/loading/loadingScreen';
 import AboutPage from '../pages/about/aboutPage';
 import LoginPage from '../pages/login/loginPage';
 import UpdatesPage from '../pages/updates/updatesPage';
-import UserPage from '../pages/user/userPage';
+import UserPage from '../pages/userInfo/userInfo';
 import { AuthContext } from '../utils/auth-context'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
