@@ -2,7 +2,15 @@ import { Navigate, useLocation } from "react-router-dom"
 import { AuthContext } from "../../utils/auth-context"
 import { useContext } from "react";
 import ClubLogoWhite from '../../assets/images/ClubLogoWhite.png'
-import classNamesNav from './navBar.module.css'
+import ClubLogoBlack from '../../assets/images/ClubLogoBlack.png'
+import classNamesNav from './navBar.module.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+     faYoutube,
+     faFacebook,
+     faTwitter,
+     faInstagram
+   } from "@fortawesome/free-brands-svg-icons";
 
 const NavBar = () => {
      
@@ -17,14 +25,16 @@ const NavBar = () => {
          return (
          <header>
           <nav className={classNamesNav.navbar}>
-               <img src={ClubLogoWhite} className={classNamesNav.logo}  alt="logo"/>
+               <img src={ClubLogoBlack} className={classNamesNav.logo}  alt="logo"/>
                <ul className={classNamesNav.nav_sections}>
-                    <li className={classNamesNav.nav_item}>Section 1</li>
-                    <li className={classNamesNav.nav_item}>Section 2</li>
-                    <li className={classNamesNav.nav_item}>Section 3</li>
+                    <li className={classNamesNav.nav_item}>About</li>
+                    <li className={classNamesNav.nav_item}>Works</li>
+                    <li className={classNamesNav.nav_item}>Blogs</li>
                </ul>
-               <button className={classNamesNav.menu_button}>Menu</button>
-
+               <ul className={classNamesNav.nav_sections}>
+                    <li className={classNamesNav.social_logo}> <FontAwesomeIcon icon={faYoutube} size="2x" /></li>
+                    <li className={classNamesNav.social_logo}><FontAwesomeIcon icon={faInstagram} size="2x" /></li>
+               </ul>
           </nav>
          </header>
          );

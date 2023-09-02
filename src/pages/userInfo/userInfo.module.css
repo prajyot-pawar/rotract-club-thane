@@ -4,13 +4,11 @@ h2{
   font-style:  normal;
   font-size: small;
   font-weight: normal;
-  color: #002E86;
 }
 
 
 .screen{     
      height: auto;  
-     background-color: #fc2121;
      width: 100vw;
      /* linear-gradient(
        rgba(0,28,36,0.7),
@@ -19,6 +17,7 @@ h2{
        rgba(7,89,145,0.7),
        rgba(6,96,165,0.7),
    ), */   
+   background-color: white;
    color: #003089;
 }
 
