@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import NavBar from "../../components/navbar/navbar";
 
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
 
   return (
     <>
+    <NavBar/>
     <button onClick={LoginUser}>Login </button>
     <button onClick={RegisterUser}>SignUp </button>
     </>

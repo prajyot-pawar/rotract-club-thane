@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import ClubLogoWhiteText from '../../assets/images/ClubLogoWhiteText.png'
 import ClubLogoWhiteWheel from '../../assets/images/ClubLogoWhiteWheel.png'
 import classNames from './loginPage.module.css'
+import NavBar from '../../components/navbar/navbar'
 
 const defaultFormFields = {
   email: '',
@@ -52,7 +53,8 @@ const LoginPage = () => {
 
   return (
   <>
-  <div className={classNames.login_screen}>              
+  <div className={classNames.login_screen}>             
+  <NavBar/>   
     <div className={classNames.goto}>      
     <div className={classNames.logo}>
       <img src={ClubLogoWhiteText} className={classNames.logotext}  alt="logo">        
