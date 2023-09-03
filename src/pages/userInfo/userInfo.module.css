@@ -59,12 +59,31 @@ form {
   align-items: center;
   justify-self: center;
   justify-content:center ;  
-  width: 50%;
+  width: 80%;
   text-align: center; 
-  background-color: #0b91ff;
+  border-style: solid;
+  border-color: #003089;
+  border-radius: 35px;
+  color: #003089;
+  padding-top: 5%;
    }
 
-
+.field{
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  padding-top: 2%;
+  padding-left: 1%;
+  width: 99%;
+}
+   
+.edu{
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  padding-top: 2%;
+  width: 90%;
+}
    
 .input_text{    
      width:100%;
@@ -73,18 +92,35 @@ form {
    align-items: center;
    justify-content:center ;  
    position: relative;
-   width: 80%;
    font-size: 1ex;
-   /* height: 100%;     */
    height:auto;
  }
 
+ .input_text > input{  
+  width:0%;
+ }
+ 
+ header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.navbar{  
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 1440px;
+  color:#537FE7;
+  padding-top: 2%;
+}
+
+
  input{     
      display: flex;
-     width:90%;
+     width:60%;
       height: auto;
-      padding: 2ex;
-      margin: 0px 0px;
       border-radius: 10px;
       border:none;
       border: 1px solid  rgb(255, 255, 255);
@@ -99,15 +135,17 @@ form {
  span{
      font-size: 12px;
      font-weight: bold;
-     color: rgb(255, 255, 255);
+     color: #003089;
      display: none;
  }
  
  label{
      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;  
-   font-style: oblique;
-      font-size: 20px;
-      color: rgb(255, 255, 255); 
+     font-style: oblique;
+     font-size: 20px;
+     min-width: 100px;
+     max-width: 20%;
+     color: #003089; 
   }
  
   button{
@@ -127,4 +165,50 @@ form {
  
   input:invalid~span{
      display: block;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    
+form {
+  display:  flex;
+  flex-direction: column;
+  align-items: start;
+  justify-self: center;
+  justify-content:center ;  
+  width: 100%;
+  text-align: center; 
+  border-style: solid;
+  border-color: #003089;
+  border-radius: 35px;
+  color: #003089;
+  padding-top: 5%;
+   }
+   
+.field{
+  display: flex;
+  justify-items: end;
+  padding-top: 2%;
+  width: 90%;
+}
+
+.edu{
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  justify-items: start;
+  padding-top: 2%;
+  width: 50%;
+}
+ 
+label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;  
+    font-style: oblique;
+    font-size: 20px;
+    min-width: 100px;
+    max-width: 30%;
+    align-self: flex-start;
+    color: #003089; 
+ }
+   
   }

@@ -12,8 +12,7 @@ import {
      faInstagram
    } from "@fortawesome/free-brands-svg-icons";
 
-const NavBar = () => {
-     
+const NavBar = () => {     
   const { currentUser } = useContext(AuthContext);
   let location = useLocation();
 
@@ -32,7 +31,7 @@ const NavBar = () => {
                     <li className={classNamesNav.nav_item}>Blogs</li>
                </ul>
                <ul className={classNamesNav.nav_sections}>
-                    <li className={classNamesNav.social_logo}> <FontAwesomeIcon icon={faYoutube} size="2x" /></li>
+                    <li className={classNamesNav.social_logo}><FontAwesomeIcon icon={faYoutube} size="2x" /></li>
                     <li className={classNamesNav.social_logo}><FontAwesomeIcon icon={faInstagram} size="2x" /></li>
                </ul>
           </nav>

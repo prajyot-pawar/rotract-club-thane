@@ -1,6 +1,7 @@
 import { useState,} from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import {  storage } from "../../services/Firebase"; 
+import CircularProgress from '@mui/material/CircularProgress';
 
 interface ImageUploadProps {
      onImageUrlChange: (url: string) => void;
@@ -54,6 +55,7 @@ interface ImageUploadProps {
         <div>
             <input type="file" onChange={handleChange} accept="image/*" />
             <button onClick={handleUpload}>Upload </button>
+            <CircularProgress variant="determinate" value={percent} />
             <p>{percent} % done</p>
         </div>
     );

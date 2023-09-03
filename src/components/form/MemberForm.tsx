@@ -48,51 +48,53 @@ export const MemberForm = () => {
     setImageUrl(url);
   };
  
-     return (
+     return (<>
+        <h3>Welcome!</h3>
          <form className={classNames.form} onSubmit={onSubmit}>
-             <div className="field">
+             <div className={classNames.field}>
                  <label htmlFor="fname">First Name : </label>
                  <input id="fname" required/>
              </div>
-             <div className="field">
+             <div className={classNames.field}>
                  <label htmlFor="sname">Last Name : </label>
                  <input id="sname" required/>
              </div>
-             <div className="field">
+             <div className={classNames.field}>
                  <label htmlFor="email">Email : </label>
                  <input type="email" id="email" required/>
              </div>             
-             <div className="field">
+             <div className={classNames.field}>
                  <label htmlFor="tel_no">tel_no : </label>
                  <input type="tel" name="phone" pattern="[0-9]{10}" id="tel_no" required/>
              </div>  
-             <div className="edu">
-             <div className="field">
+             <div className={classNames.edu}>
+             <div className={classNames.field}>
                  <label htmlFor="edu10">10th Marks : </label>
                  <input type="text" id="edu10" />
              </div>
-             <div className="field">
+             <div className={classNames.field}>
                  <label htmlFor="edu12">12th Marks : </label>
                  <input type="text" id="edu12" />
              </div>
-             <div className="field">
+             <div className={classNames.field}>
                  <label htmlFor="edugrad">Graduation Marks : </label>
                  <input type="text" id="edugrad" />
-             </div>
-             <div className="field">
+             </div>      
+             </div>       
+             <div className={classNames.field}>
                  <label htmlFor="projects">Projects : </label>
                  <input type="text" id="projects" />
              </div>
-             <div className="field">
+             <div className={classNames.field}>
              <ImageUpload onImageUrlChange={handleImageUrlChange}/>
-             </div>          
-             </div>          
-             <div className="field checkbox">                
+             </div>       
+             <div className={classNames.field_check}>                
              <input type="checkbox" id="conditionsAccepted" />
                  <label htmlFor="conditionsAccepted" >I agree to the terms and conditions</label>
              </div>
-             <button type="submit">Submit</button>
+             <button type="submit">Publish</button>
          </form>
+     </>
      );
  };
  
