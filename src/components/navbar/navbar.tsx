@@ -5,6 +5,7 @@ import ClubLogoWhite from '../../assets/images/ClubLogoWhite.png'
 import ClubLogoBlack from '../../assets/images/ClubLogoBlack.png'
 import classNamesNav from './navBar.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { isDesktop, isTablet, isMobile } from '../../constants/screen-size';
 import {
      faYoutube,
      faFacebook,
@@ -15,21 +16,21 @@ import {
 const NavBar = () => {     
   const { currentUser } = useContext(AuthContext);
   let location = useLocation();
-
+  
   
 
   if (currentUser) {
-     // Redirect the user to the home page.
-         // Please! Close the mustache {{}}
          return (
          <header>
           <nav className={classNamesNav.navbar}>
                <img src={ClubLogoBlack} className={classNamesNav.logo}  alt="logo"/>
+               { !isDesktop ?
                <ul className={classNamesNav.nav_sections}>
                     <li className={classNamesNav.nav_item}>About</li>
                     <li className={classNamesNav.nav_item}>Works</li>
                     <li className={classNamesNav.nav_item}>Blogs</li>
-               </ul>
+               </ul>:<image></image>
+               }
                <ul className={classNamesNav.nav_sections}>
                     <li className={classNamesNav.social_logo}><FontAwesomeIcon icon={faYoutube} size="2x" /></li>
                     <li className={classNamesNav.social_logo}><FontAwesomeIcon icon={faInstagram} size="2x" /></li>

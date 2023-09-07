@@ -1,0 +1,43 @@
+.canvas{
+     display: flex;
+     justify-content: space-between;
+     max-width: 100%;
+     width: 1440px;
+     background-color: aliceblue;
+     min-height: 100vh;
+     color:#437bff;
+     padding-top: 2%;
+}
+
+.main{     
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;     
+}
+
+.avatar{
+     border-radius: 50%;
+     width: 50%;
+     background-color: #437bff;
+}
+
+
+.intro{
+     display: flex;
+     flex-direction: column;
+     color: #4164B5;
+font-family: Poppins;
+font-size: 80px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.intro_head{
+     color: #4164B5;
+     font-family: Poppins;
+     font-size: 80px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+}

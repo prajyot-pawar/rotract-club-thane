@@ -3,7 +3,7 @@ import { signInUser } from '../../services/Firebase'
 import { useNavigate } from 'react-router-dom'
 import ClubLogoWhiteText from '../../assets/images/ClubLogoWhiteText.png'
 import ClubLogoWhiteWheel from '../../assets/images/ClubLogoWhiteWheel.png'
-import classNames from './loginPage.module.css'
+import classNamesLogin from './loginPage.module.css'
 import NavBar from '../../components/navbar/navbar'
 
 const defaultFormFields = {
@@ -53,23 +53,24 @@ const LoginPage = () => {
 
   return (
   <>
-  <div className={classNames.login_screen}>             
+  <div className={classNamesLogin.login_screen}>             
   <NavBar/>   
-    <div className={classNames.goto}>      
-    <div className={classNames.logo}>
-      <img src={ClubLogoWhiteText} className={classNames.logotext}  alt="logo">        
+  <div className={classNamesLogin.herosection}> 
+  <div className={classNamesLogin.goto}>      
+    <div className={classNamesLogin.logo}>
+      <img src={ClubLogoWhiteText} className={classNamesLogin.logotext}  alt="logo">        
       </img>
-      <img src={ClubLogoWhiteWheel} className={classNames.logowheel} alt="logo">        
+      <img src={ClubLogoWhiteWheel} className={classNamesLogin.logowheel} alt="logo">        
       </img>
       </div>   
         </div>
-        <div className={classNames.goto}>
-          {/* <div className={classNames.logo}>
+        <div className={classNamesLogin.goto}>
+          {/* <div className={classNamesLogin.logo}>
             <a href="https://reactjs.org" target="_blank">
               <img src={ClubLogoWhite} className="logo react" alt="React logo" />
             </a>
           </div> */}
-          <div className={classNames.card}>
+          <div className={classNamesLogin.card}>
           <form onSubmit={handleSubmit}>
           <h1 >Sign In Form</h1>
             <div>
@@ -94,12 +95,13 @@ const LoginPage = () => {
               />
               <span>{errorPassMessage}</span>
             </div>
-              <div className={classNames.button}>
+              <div className={classNamesLogin.button}>
               <button id='recaptcha' type="submit">Submit</button>
             </div>          
           </form>
           </div>
-        </div>
+        </div></div>
+   
       </div>
   
   </>

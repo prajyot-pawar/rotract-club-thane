@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/navbar/navbar";
+import "../../constants/screen-size";
 
 
 const HomePage = () => {
-  
   const navigate = useNavigate()
 
   const LoginUser = () => {

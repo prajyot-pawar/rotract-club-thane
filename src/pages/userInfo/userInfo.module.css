@@ -8,17 +8,13 @@ h2{
 
 
 .screen{     
-     height: auto;  
-     width: 100vw;
-     /* linear-gradient(
-       rgba(0,28,36,0.7),
-       rgba(8,59,112,0.7),
-       rgba(9,63,121,0.7),
-       rgba(7,89,145,0.7),
-       rgba(6,96,165,0.7),
-   ), */   
-   background-color: white;
-   color: #003089;
+  height: auto;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  color: #003089;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -59,22 +55,26 @@ form {
   align-items: center;
   justify-self: center;
   justify-content:center ;  
-  width: 80%;
+  width: 60%;
   text-align: center; 
-  border-style: solid;
+  /* border-style: solid;
   border-color: #003089;
   border-radius: 35px;
-  color: #003089;
+  color: #003089; */
   padding-top: 5%;
    }
 
 .field{
-  display: flex;
-  flex-direction: row;
-  justify-items: start;
-  padding-top: 2%;
-  padding-left: 1%;
-  width: 99%;
+    display: flex;
+    flex-direction: row;
+    /* justify-items: start; */
+    align-items: stretch;
+    justify-items: center;
+    padding-top: 2%;
+    padding-left: 1%;
+    width: 99%;
+    align-content: center;
+    justify-content: space-evenly;
 }
    
 .edu{
@@ -119,7 +119,7 @@ form {
 
  input{     
      display: flex;
-     width:60%;
+     width:100%;
       height: auto;
       border-radius: 10px;
       border:none;
@@ -149,7 +149,7 @@ form {
   }
  
   button{
-      width:80%;
+      width:100%;
       height: auto;
       padding: 2ex;
       border: none;
@@ -166,6 +166,19 @@ form {
   input:invalid~span{
      display: block;
   }
+
+ @media only screen and (max-width: 1200px){
+.edu{
+  display: flex;
+  flex-direction: column;
+}
+.edu .field{  
+  display: flex;
+  justify-items: end;
+  padding-top: 2%;
+  width: 70%;
+}
+ }
 
   @media only screen and (max-width: 600px) {
 
@@ -196,9 +209,9 @@ form {
   display: flex;
   flex-direction: column;
   background-color: aliceblue;
-  justify-items: start;
+  justify-items: center;
   padding-top: 2%;
-  width: 50%;
+  width: 90%;
 }
  
 label{
@@ -206,7 +219,7 @@ label{
     font-style: oblique;
     font-size: 20px;
     min-width: 100px;
-    max-width: 30%;
+    max-width: 50%;
     align-self: flex-start;
     color: #003089; 
  }

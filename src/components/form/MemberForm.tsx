@@ -5,7 +5,7 @@ import '../form/UpdateProfileInfo';
 import ImageUpload from '../imageupload/image-upload';
 import { useContext ,useState} from 'react';
 import { db } from '../../services/Firebase';
-import classNames from '../../pages/userInfo/userInfo.module.css'
+import classNamesMemberForm from '../form/memberform.module.css'
 // import ImageUpload from '../imageupload/image-upload';
    
 
@@ -50,45 +50,45 @@ export const MemberForm = () => {
  
      return (<>
         <h3>Welcome!</h3>
-         <form className={classNames.form} onSubmit={onSubmit}>
-             <div className={classNames.field}>
-                 <label htmlFor="fname">First Name : </label>
+         <form className={classNamesMemberForm.form} onSubmit={onSubmit}>
+             <div className={classNamesMemberForm.field}>
+                 <label htmlFor="fname">First Name</label><label>:</label>
                  <input id="fname" required/>
              </div>
-             <div className={classNames.field}>
-                 <label htmlFor="sname">Last Name : </label>
+             <div className={classNamesMemberForm.field}>
+                 <label htmlFor="sname">Last Name</label><label>:</label>
                  <input id="sname" required/>
              </div>
-             <div className={classNames.field}>
-                 <label htmlFor="email">Email : </label>
+             <div className={classNamesMemberForm.field}>
+                 <label htmlFor="email">Email</label><label>:</label>
                  <input type="email" id="email" required/>
              </div>             
-             <div className={classNames.field}>
-                 <label htmlFor="tel_no">tel_no : </label>
+             <div className={classNamesMemberForm.field}>
+                 <label htmlFor="tel_no">tel_no</label><label>:</label>
                  <input type="tel" name="phone" pattern="[0-9]{10}" id="tel_no" required/>
              </div>  
-             <div className={classNames.edu}>
-             <div className={classNames.field}>
-                 <label htmlFor="edu10">10th Marks : </label>
+             <div className={classNamesMemberForm.edu}>
+             <div className={classNamesMemberForm.field}>
+                 <label htmlFor="edu10">10th Marks</label><label>:</label>
                  <input type="text" id="edu10" />
              </div>
-             <div className={classNames.field}>
-                 <label htmlFor="edu12">12th Marks : </label>
+             <div className={classNamesMemberForm.field}>
+                 <label htmlFor="edu12">12th Marks</label><label>:</label>
                  <input type="text" id="edu12" />
              </div>
-             <div className={classNames.field}>
-                 <label htmlFor="edugrad">Graduation Marks : </label>
+             <div className={classNamesMemberForm.field}>
+                 <label htmlFor="edugrad">Graduation Marks</label><label>:</label>
                  <input type="text" id="edugrad" />
              </div>      
              </div>       
-             <div className={classNames.field}>
-                 <label htmlFor="projects">Projects : </label>
+             <div className={classNamesMemberForm.field}>
+                 <label htmlFor="projects">Projects</label><label>:</label>
                  <input type="text" id="projects" />
              </div>
-             <div className={classNames.field}>
+             <div className={classNamesMemberForm.field}>
              <ImageUpload onImageUrlChange={handleImageUrlChange}/>
              </div>       
-             <div className={classNames.field_check}>                
+             <div className={classNamesMemberForm.field_check}>                
              <input type="checkbox" id="conditionsAccepted" />
                  <label htmlFor="conditionsAccepted" >I agree to the terms and conditions</label>
              </div>

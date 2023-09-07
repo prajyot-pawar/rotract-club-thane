@@ -7,22 +7,15 @@ import NavBar from '../../components/navbar/navbar'
 import { useNavigate } from 'react-router-dom'
 
 
-function UserPage() { 
-  const { currentUser, signOut } = useContext(AuthContext)
+function EditDetailsScreen() { 
   const navigate = useNavigate();
-  function gotoEditDetailsScreen(){    
-    navigate('/rotract-club-thane/edit')
-  }
   
   return(
     <div className={classNamesUserInfo.screen}>    
     <NavBar/>   
-    <button onClick={signOut}>Sign Out</button>
-      <h3>Welcome! {currentUser?.email}</h3>
-      <p>Sign In Status: {currentUser && 'active'}</p>      
-    <button onClick={gotoEditDetailsScreen}>Edit Details</button>
+      <h3>Edit Details</h3>    
       <MemberForm/>
     </div>
   )
 }
-export default UserPage
+export default EditDetailsScreen
