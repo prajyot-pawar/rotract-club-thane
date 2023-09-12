@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import firebase from 'firebase/app';
 import { doc, getDoc  } from 'firebase/firestore';
 import 'firebase/firestore';
 import { db } from '../../../services/Firebase';
 import { useParams } from 'react-router-dom';
 import NavBar from '../../../components/navbar/navbar';
+import HeroSectionPortFolio from '../layout/HeroSection';
 
 
 function UserProfile({ uid }: { uid: string }) {
